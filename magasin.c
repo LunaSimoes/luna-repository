@@ -25,6 +25,14 @@ int main()
     int choix ;
     int itemachat ;
     int argentJoueur = 500;
+	
+	int epee1 = 0;
+	int bouclier1 = 0;
+	int potion1 = 0;
+	int lance1 = 0;
+	int armure1 = 0;
+	int peluche1 = 0;
+
 
     printf("Comment t'appelles-tu ? ");
     scanf("%s", prenom);
@@ -33,7 +41,7 @@ int main()
 
    while (argentJoueur > 0){
 
-    printf("Veux-tu m'acheter quelque chose ? \n [1] oui \n [2] non");
+    printf("Veux-tu m'acheter quelque chose ? \n [1] oui \n [2] non \n [3] Voir votre inventaire");
     scanf("%d", &choix);
 
     if (choix == 1){
@@ -86,6 +94,15 @@ int main()
 
 	if (choix == 2){
 		printf("Veux-tu vendre dans ce cas ?");
+	}
+	
+		if (choix == 3){
+		printf("Vous possédez \n %d %s \n", epee1, epee.nomObjet);
+		printf("\n %d %s \n", bouclier1, bouclier.nomObjet);
+    	printf("\n %d %s \n", potion1, potion.nomObjet);
+    	printf("\n %d %s \n", lance1, lance.nomObjet);
+    	printf("\n %d %s \n", armure1, armure.nomObjet);
+    	printf("\n %d %s \n", peluche1, peluche.nomObjet);
 	}
 
 		}
